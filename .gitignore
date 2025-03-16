@@ -1,0 +1,13 @@
+node_modules/
+license.txt
+readme.html
+
+vendor/
+cache/
+composer.json
+composer.lock
+
+*Zone.Identifier
+package-lock.json
+dist/js/
+dist/css

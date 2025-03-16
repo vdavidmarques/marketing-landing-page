@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+%link-hover {
+  color: $fColor;
+
+  &:hover {
+    @include transition-colors;
+    color: $fColorDark;
+
+    @media (min-width: $breakpoint-lg) {
+      color: $fColorDark;
+    }
+  }
+}

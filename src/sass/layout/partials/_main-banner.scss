@@ -1,0 +1,57 @@
+@use "../../helpers" as *;
+
+.banners{
+  overflow-y: hidden;
+}
+
+.swiper-button-next.arrow-swiper-next,
+.swiper-button-prev.arrow-swiper-prev {
+  display: none;
+  
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+  }
+}
+
+.swiper-button-next.arrow-swiper-next {
+  right: 1.875rem;
+}
+
+.swiper-button-prev.arrow-swiper-prev {
+  left: 1.875rem;
+}
+
+.arrow-swiper-prev::after {
+  transform: rotate(180deg);
+}
+
+.swiper-container {
+  position: relative;
+  height: 34.375rem;
+  
+  @media screen and (min-width: $breakpoint-md){
+    height: 25rem;
+  }
+  
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 43.75rem;
+  }
+
+  a {
+    margin-top: 24px;
+    text-decoration: none;
+  }
+
+  .default-heading-title {
+    color: $white;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    right: 0;
+    top: 1.125rem;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+      top: 5.625rem;
+    }
+  }
+}
