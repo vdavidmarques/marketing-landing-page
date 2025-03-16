@@ -1,34 +1,17 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-
+<html lang="pt-br">
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width">
-    <?php wp_head(); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choran - Marketing</title>
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Alexandria|Bebas+Neue">
 </head>
-
-<body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
-    <div id="wrapper" class="hfeed">
-        <header class="header" role="banner">
-            <div class="container header--container">
-                <div class="header--container--branding">
-                    <?php
-                    if (function_exists('the_custom_logo')) {
-                        the_custom_logo();
-                    }
-                    ?>
-                </div>
-                <div class="open-menu-mobile">
-                    <button onclick="openMenu()" class="bg-menu-mobile">Menu</button>
-                </div>
-                <div class="header--container--menu-items">
-                    <?php custom_header_menu(); ?>
-    
-                    <button onclick="closeMenu()" class="bg-close-menu-mobile">
-                        Fechar menu
-                    </button>
-                </div>
-            </div>
-        </header>       
-            <main id="content" role="main">
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="dist/images/choran-logo.svg" alt="Choran - Marketing" class="header--logo">
+        </div>
+    </header>    
+    <main>

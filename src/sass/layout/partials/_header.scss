@@ -1,139 +1,23 @@
 @use "../../helpers" as *;
 
-.header{
-  position: relative;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  
-  @media screen and (min-width: $breakpoint-lg) {
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
+.header {
+  .container{
+    position: relative;
   }
-  &--container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 
-    &--branding {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .custom-logo {
-        width: 8.75rem;
-        height: auto;
-        object-fit: cover;
-        @include mx-auto;
-
-        @media screen and (min-width: $breakpoint-lg) {
-          width: 10rem;
-        }
-      }
-    }
-
-    .open-menu-mobile {
-      @media (min-width: $breakpoint-lg) {
-        display: none;
-      }
-
-      .bg-menu-mobile {
-        background: url(../../dist/icons/menu-icon.svg);
-        width: 2.0625rem;
-        height: 1.3125rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden;
-        padding-left: 1.5rem;
-        text-indent: -624.9375rem;
-        border: none;
-      }
-    }
-
-    &--menu-items{
-      font-family: $fontRubik;
-      text-transform: uppercase;
-      color: $fColor;
-      font-weight: 900;
-      display: none;
-
-      @media (min-width: $breakpoint-lg) {
-        display: flex;
-        align-items: center;
-      }
-
-      nav ul.main-menu {
-        display: none;
-
-        @media (min-width: $breakpoint-lg) {
-          display: flex;
-          flex-direction: row;
-          column-gap: 1.25rem;
-        }
-
-        a {
-          font-size: 18px;
-          @extend %link-hover;
-
-          @media (min-width: $breakpoint-1_5xl) {
-            font-size: 1.25rem;
-          }
-        }
-      }
-
-      .bg-close-menu-mobile {
-        @media (min-width: $breakpoint-lg) {
-          display: none;
-        }
-      }
-
-      &.openned {
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        padding: 20px;
-        background-color: $fColorDark;
-        z-index: 50;
-
-        nav {
-          margin-top: 3.75rem;
-
-          ul.main-menu {
-            display: flex;
-            flex-direction: column;
-            row-gap: 1.875rem;
-
-            .menu-item {
-              a {
-                color: $white;
-              }
-            }
-          }
-        }
-
-        .bg-close-menu-mobile {
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden;
-          padding-left: 1.5rem;
-          text-indent: -624.9375rem;
-          border: none;
-          position: absolute;
-          top: 1.25rem;
-          right: 1rem;
-          width: 2.25rem;
-          height: 2.25rem;
-          background: url(../../dist/icons/close-menu-icon.svg);
-          cursor: pointer;
-        }
-      }
+  &--logo {
+    width: 5rem;
+    height: 7.5rem;
+    object-fit: contain;
+    position: absolute;
+    left: 32px;
+    z-index: 10;
+    top: 0;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+      width: 6.875rem;
+      top: 0.625rem;
+      left: 5rem;
     }
   }
 }
-
-

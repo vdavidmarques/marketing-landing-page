@@ -1,57 +1,190 @@
 @use "../../helpers" as *;
 
-.banners{
-  overflow-y: hidden;
-}
-
-.swiper-button-next.arrow-swiper-next,
-.swiper-button-prev.arrow-swiper-prev {
-  display: none;
-  
-  @media screen and (min-width: $breakpoint-lg) {
-    display: flex;
-  }
-}
-
-.swiper-button-next.arrow-swiper-next {
-  right: 1.875rem;
-}
-
-.swiper-button-prev.arrow-swiper-prev {
-  left: 1.875rem;
-}
-
-.arrow-swiper-prev::after {
-  transform: rotate(180deg);
-}
-
-.swiper-container {
+.banner {
+  background-color: $fColor;
+  width: 100%;
+  height: 100%;
   position: relative;
-  height: 34.375rem;
-  
-  @media screen and (min-width: $breakpoint-md){
-    height: 25rem;
-  }
-  
+  min-height: 25rem;
+
   @media screen and (min-width: $breakpoint-lg) {
-    height: 43.75rem;
+    overflow: hidden;
+    height: 56.5rem;
   }
 
-  a {
-    margin-top: 24px;
-    text-decoration: none;
-  }
-
-  .default-heading-title {
-    color: $white;
+  &::before {
+    content: "";
     position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
     left: 0;
+    background-image: url("../../dist/images/wave-vector-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
     z-index: 10;
-    right: 0;
-    top: 1.125rem;
+    pointer-events: none;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      background-size: cover;  
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+      background-position: left;
+    }
+
+    @media screen and (min-width: $breakpoint-2xl) {
+      background-size: 100% 100%;
+    }
+  }
+
+  &--image {
+    background-image: url("../../dist/images/fature-choran-marketing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 25rem;
     
     @media screen and (min-width: $breakpoint-lg) {
-      top: 5.625rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: left;
+      height: 56.5rem;
     }
+
+    @media screen and (min-width: $breakpoint-xl) {
+      background-position: 290px 0%;
+    }
+  }
+
+  &--content {
+    color: $white;
+    background-color: $fColorDark;
+    padding: 3.75rem 0;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      background-color: transparent;
+      padding-top: 0;
+      transform: translateY(8.875rem);
+    }
+
+    &--title {
+      font-size: 20px;
+      color: $white;
+      line-height: 2.1875rem;
+      margin-bottom: 1.25rem;
+      display: grid;
+      @include grid-cols-12;
+
+      strong {
+        color: $sColor;
+        font-size: 2.5rem;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: 45px;
+        margin-bottom: inherit;
+        line-height: 5.1875rem;
+
+        strong {
+          font-size: 4.375rem;
+        }
+      }
+
+      @media screen and (min-width: $breakpoint-1_5xl) {
+        font-size: 60px;
+      }
+
+      .quote-1,
+      .values,
+      .quote-2,
+      .quote-3,
+      .quote-4 {
+        @include col-span-12;
+      }
+      
+      .quote-3 {       
+        @media screen and (min-width: $breakpoint-md) {
+          @include col-start-3;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+          @include col-start-4;
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+          @include col-start-3;
+        }
+
+        @media screen and (min-width: $breakpoint-2xl) {
+          @include col-start-1;
+        }
+      }
+
+      .quote-4 {
+        @media screen and (min-width: $breakpoint-md) {
+          @include col-start-3;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+          @include col-start-4;
+        }
+
+        @media screen and (min-width: $breakpoint-1_5xl) {
+          @include col-start-3;
+        }
+
+        @media screen and (min-width: $breakpoint-2xl) {
+          @include col-start-2;
+        }
+      }
+    }
+
+    &--subtitle {
+      padding: 1.25rem;
+      display: grid; 
+      position: relative;
+      @include grid-cols-3;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        max-width: $breakpoint-lg;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: inherit;
+        @include grid-cols-12;
+      }
+      
+      @media screen and (min-width: $breakpoint-xl) {
+        max-width: $breakpoint-xl;
+      }
+    
+      @media screen and (min-width: $breakpoint-1_5xl) {
+        max-width: $breakpoint-1_5xl;
+      }
+    
+      @media screen and (min-width: $breakpoint-2xl) {
+        max-width: $breakpoint-2xl;
+      }
+
+      &--text{
+        @include col-span-12;
+        @include col-start-2;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          text-align: center;
+          font-size: 1.875rem;
+          font-weight: 600;
+          background-color: #ffffff9c;
+          color: $fColor;
+          border-radius: 2.5rem;
+          padding: 1.25rem;
+          @include col-start-5;
+        }
+      }
+    }
+
   }
 }

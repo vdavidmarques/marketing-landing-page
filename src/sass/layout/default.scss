@@ -155,7 +155,7 @@ input[type="email"],
 input[type="tel"],
 textarea,
 input[type] {
-  font-family: $fontRubik;
+  font-family: $firstFont;
   width: 100%;
   border: 1px solid $fColor;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
@@ -201,17 +201,18 @@ section {
 }
 
 body {
-  font-family: $fontRubik;
-  font-size: 1rem;
+  font-family: $firstFont;
+  font-size: 16px;
   line-height: 1.875rem;
   overflow-x: hidden;
   color: $fColor;
+  position: relative;
 }
 
 a {
   text-decoration: none;
   @include transition-colors;
-}
+} 
 
 a[href^="tel"] {
   color: inherit;
@@ -227,24 +228,34 @@ strong {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 16px;
   width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-sm;
+  }
 
   @media screen and (min-width: $breakpoint-md) {
     max-width: $breakpoint-md;
-  }
-  @media screen and (min-width: $breakpoint-md) {
-    max-width: $breakpoint-md;
-  }
+    padding: 0 5rem;
+  }  
+
   @media screen and (min-width: $breakpoint-lg) {
-    padding: 0 2.5rem;
+    max-width: $breakpoint-lg;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
   @media screen and (min-width: $breakpoint-xl) {
     max-width: $breakpoint-xl;
   }
+
   @media screen and (min-width: $breakpoint-1_5xl) {
+    max-width: $breakpoint-1_5xl;
+  }
+
+  @media screen and (min-width: $breakpoint-2xl) {
     max-width: $breakpoint-2xl;
   }
 }

@@ -1,3 +1,6 @@
-<?php get_header(); ?>
-<p>index.php</p>
-<?php get_footer();
+<?php 
+    include 'header.php';
+    include 'sections/banner.php';
+    include 'sections/sub-headline.php';
+    include 'footer.php';
+?>
