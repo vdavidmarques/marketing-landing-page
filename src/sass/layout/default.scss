@@ -157,9 +157,10 @@ textarea,
 input[type] {
   font-family: $firstFont;
   width: 100%;
-  border: 1px solid $fColor;
+  border: inherit;
+  background-color: $white;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-  border-radius: 1.25rem;
+  border-radius: 10px;
 }
 
 input::placeholder,

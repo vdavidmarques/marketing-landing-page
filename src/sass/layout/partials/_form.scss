@@ -1,0 +1,126 @@
+@use "../../helpers" as *;
+
+.form{
+    
+    @media screen and (min-width: $breakpoint-lg) {
+        background-image: url('../../dist/images/bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &--container{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-top: 5rem;
+            padding-bottom: 2.5rem;
+        }
+        
+        &--header{
+            @media screen and (min-width: $breakpoint-lg) {
+                display: grid;
+                font-size: 1.5rem;
+                @include grid-cols-12;
+            }
+
+            strong{
+                font-size: 1.125rem;
+                @media screen and (min-width: $breakpoint-lg) {
+                    font-size: 1.875rem;
+                }
+            }
+
+            .title{
+                @media screen and (min-width: $breakpoint-lg) {
+                    line-height: 2.1875rem;
+                    @include col-span-5;
+                } 
+            }
+        }
+
+        &--content{
+            margin-top: 2.5rem;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                display: grid;
+                @include grid-cols-12;
+            }
+
+            &--thumb{
+                margin-bottom: 2.5rem;
+                @media screen and (min-width: $breakpoint-lg) {
+                    @include col-span-5;
+                }
+            }
+
+            &--form{
+                @media screen and (min-width: $breakpoint-lg) {
+                    @include col-span-6;
+                    @include col-start-7;
+                }
+                .title{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                    margin-bottom: 1.25rem;
+                }
+
+                .form-fields{
+                    background-color: $fColor;
+                    color: $white;
+                    padding: 2.25rem 1.25rem;
+                    border-radius: 2.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1.25rem;
+
+                    button{
+                        background-color: $white;
+                        padding: 0.625rem;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        padding-left: 1.875rem;
+                        border: inherit;
+                        color: $fColor;
+                        border-radius: 3.125rem;
+                        position: relative;
+                        width: 100%;
+                        height: 3.4375rem;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: $sColor;
+                            color: $fColor;
+                            @include transition-colors;
+                        }
+                        
+                        @media screen and (min-width: $breakpoint-lg) {
+                            font-size: 1.125rem;
+                            width: fit-content;
+                            padding-left: 3.125rem;
+                            padding-right: 1.25rem;
+                        }
+                        
+                        &::before{
+                            content: '';
+                            background-image: url('../../dist/icons/arrow-right.svg');
+                            position: absolute;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            left: 0.625rem;
+                            top: 0;
+                            width: 1.5625rem;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
