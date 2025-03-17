@@ -69,7 +69,14 @@
             font-size: 1.875rem;
             line-height: 1.6875rem;
             transform: translateY(-100px);
+            animation: bounce 1s infinite;
+            cursor: pointer;
             @include col-start-8;
+
+            &:hover{
+                animation: none; 
+                transition: transform 0.3s ease-in-out;
+            }
 
             @media screen and (min-width: 25.75rem) {
                 @include col-start-9;

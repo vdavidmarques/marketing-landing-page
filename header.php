@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <img src="dist/images/choran-logo.svg" alt="Choran - Marketing" class="header--logo">
+            <img src="dist/images/choran-logo.svg" alt="Choran - Marketing" class="header--logo scroll-effect">
         </div>
     </header>    
     <main>

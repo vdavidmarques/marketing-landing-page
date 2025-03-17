@@ -161,6 +161,13 @@ input[type] {
   background-color: $white;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
   border-radius: 10px;
+
+  &:focus-visible{
+    background-color: $fColorDark;
+    color: $white;
+    @include transition-colors;
+    outline: inherit;
+  }
 }
 
 input::placeholder,

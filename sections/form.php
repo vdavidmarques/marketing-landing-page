@@ -1,15 +1,15 @@
 <section class="form">
     <div class="form--container container">
-        <div class="form--container--header">
+        <div class="form--container--header scroll-effect">
             <h3 class="title">Soluções de marketing para os mais <strong>diversos negócios</strong> de <strong>diversos tamanhos</strong></h3>
         </div>
 
         <div class="form--container--content">
-            <div class="form--container--content--thumb">
+            <div class="form--container--content--thumb scroll-effect">
                 <img src="dist/images/solucoes-de-marketing-form.png" alt="Mulher caucasiana com cabelos longos loiro sorrindo segurando um celular da cor branca." srcset="">
             </div>
 
-            <div class="form--container--content--form">
+            <div class="form--container--content--form scroll-effect">
                 <h4 class="title">Preencha o formulário</h4>
                 <form action="" class="form-fields">
                     <div class="form--container--content--form--group">

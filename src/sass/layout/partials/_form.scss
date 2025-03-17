@@ -93,9 +93,13 @@
                         cursor: pointer;
 
                         &:hover{
-                            background-color: $sColor;
-                            color: $fColor;
+                            background-color: $fColorDark;
+                            color: $white;
                             @include transition-colors;
+
+                            &::before{
+                                background-image: url('../../dist/icons/arrow-right-white.svg');
+                            }
                         }
                         
                         @media screen and (min-width: $breakpoint-lg) {

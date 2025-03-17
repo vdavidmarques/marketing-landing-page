@@ -1,6 +1,6 @@
 <section class="solution">
     <div class="container solution--container">
-        <div class="solution--container--header">
+        <div class="solution--container--header scroll-effect">
             <h2 class="solution--container--header--title">O que a Choran Entrega</h2>
             <p class="solution--container--header--text">
                 Se você está investindo e não está vendo retorno, não é um problema do digital. <strong>É um problema de estratégia</strong>.
@@ -8,7 +8,7 @@
         </div>
 
         <div class="solution--container--cards">
-            <div class="solution--container--cards--card">
+            <article class="solution--container--cards--card scroll-effect">
                 <div class="solution--container--cards--card--thumb">
                     <img src="dist/images/escalamos-empresas.png" alt="2 mulhers loiras e um homem caucasiano conversando">
                 </div>
@@ -18,9 +18,9 @@
                    </p>
                    <span class="icon"><img src="dist/icons/scale.svg" alt="ícone expandir"></span>
                 </div>
-            </div>
+            </article>
 
-            <div class="solution--container--cards--card">
+            <article class="solution--container--cards--card scroll-effect">
                 <div class="solution--container--cards--card--thumb">
                     <img src="dist/images/escalamos-empresas.png" alt="2 mulhers loiras e um homem caucasiano conversando">
                 </div>
@@ -30,10 +30,10 @@
                    </p>
                    <span class="icon"><img src="dist/icons/scale.svg" alt="ícone expandir"></span>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="solution--container--cards--card">
+            <article class="solution--container--cards--card scroll-effect">
                 <div class="solution--container--cards--card--thumb">
                     <img src="dist/images/escalamos-empresas.png" alt="2 mulhers loiras e um homem caucasiano conversando">
                 </div>
@@ -43,9 +43,9 @@
                    </p>
                    <span class="icon"><img src="dist/icons/scale.svg" alt="ícone expandir"></span>
                 </div>
-            </div>
+            </article>
 
-            <div class="solution--container--cards--card">
+            <article class="solution--container--cards--card scroll-effect">
                 <div class="solution--container--cards--card--thumb">
                     <img src="dist/images/escalamos-empresas.png" alt="2 mulhers loiras e um homem caucasiano conversando">
                 </div>
@@ -55,9 +55,9 @@
                    </p>
                    <span class="icon"><img src="dist/icons/scale.svg" alt="ícone expandir"></span>
                 </div>
-            </div>
+            </article>
         </div>
 
-        <button class="solution--container--schedule-a-call">Agendar uma conversa</button>
+        <button class="solution--container--schedule-a-call scroll-effect">Agendar uma conversa</button>
     </div>
 </section>

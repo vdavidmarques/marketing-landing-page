@@ -181,6 +181,7 @@
           color: $fColor;
           border-radius: 2.5rem;
           padding: 1.25rem;
+          transition: ease-in-out 0.3s;
           @include col-start-5;
         }
       }

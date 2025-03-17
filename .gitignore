@@ -9,5 +9,4 @@ composer.lock
 
 *Zone.Identifier
 package-lock.json
-dist/js/
 dist/css

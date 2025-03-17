@@ -56,10 +56,24 @@
 
             &--card{
                 position: relative;
+                cursor: pointer;
                 @include col-span-12;
 
                 @media screen and (min-width: $breakpoint-lg){
                     @include col-span-6;
+                }
+
+                &:hover{
+                    .solution--container--cards--card--thumb img{
+                        scale: 1.05;
+                        transition: 0.3s;
+                    }
+
+                    .solution--container--cards--card--title{
+                        background-color: $fColorDark;
+                        color: $white;
+                        @include transition-colors;
+                    }
                 }
 
                 &::after{
@@ -157,11 +171,14 @@
             position: relative;
             display: flex;
             align-items: center;
+            animation: bounce 1s infinite;
 
             &:hover{
                 background-color: $sColor;
                 color: $fColor;
                 @include transition-colors;
+                animation: none; 
+                transition: transform 0.3s ease-in-out;
             }
 
             &::after{
