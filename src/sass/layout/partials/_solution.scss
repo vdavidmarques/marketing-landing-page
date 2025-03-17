@@ -1,0 +1,181 @@
+@use "../../helpers" as *;
+
+.solution{
+    background-color: $fColor;
+    color: $white;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    @media screen and (min-width: $breakpoint-lg){
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    &--container{
+        &--header{
+            display: grid;
+            row-gap: 1.875rem;
+            margin-bottom: 2.5rem;
+            @include grid-cols-12;
+
+            &--title{
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                font-weight: 600;
+                @include col-span-12;
+
+                @media screen and (min-width: $breakpoint-lg){
+                    font-size: 1.5625rem;
+                    @include col-span-4;
+                }
+            }
+
+            &--text{
+                @include col-span-12;
+
+                @media screen and (min-width: $breakpoint-lg){
+                    @include col-span-8;
+                    @include col-start-6;
+                }
+
+                strong{
+                    font-size: 1.125rem;
+                }
+
+            }
+        }
+
+        &--cards{
+            display: grid;
+            @include grid-cols-12;
+            row-gap: 2.5rem;
+            
+            @media screen and (min-width: $breakpoint-lg){
+                column-gap: 1.25rem;
+            }
+
+            &--card{
+                position: relative;
+                @include col-span-12;
+
+                @media screen and (min-width: $breakpoint-lg){
+                    @include col-span-6;
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    right: -2px;
+                    width: 9.375rem;
+                    height: 9.375rem;
+                    background-image: url('../../dist/images/wave-vector-right-small.svg');
+                    background-repeat: no-repeat;
+                    background-position: right;
+                    background-size: cover;
+                    z-index: 10;
+                    pointer-events: none; 
+        
+                    @media screen and (min-width: $breakpoint-lg) {
+                        background-position: 50% 70%;
+                    }
+                }
+
+                &--thumb{
+                    border-radius: 50px 50px 0 0;
+                    overflow: hidden;
+                    display: flex;
+                }
+
+                &--title{
+                    background-color: $white;
+                    color: $fColor;
+                    padding: 0.625rem;
+                    display: grid;
+                    align-items: center;
+                    @include grid-cols-6;
+                    
+                    .text{
+                        line-height: 1.5rem;
+                        @include col-span-4;
+                        
+                        @media screen and (min-width: $breakpoint-md){
+                            @include col-span-5;
+                        }
+
+                        @media screen and (min-width: $breakpoint-lg){
+                            @include col-span-4;
+                        }
+                    }
+
+                    .icon{
+                        background-color: $white;
+                        border-radius: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 20;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        @include col-span-2;
+
+                        @media screen and (min-width: $breakpoint-md){
+                            @include col-span-1;
+                        }
+
+                        @media screen and (min-width: $breakpoint-lg){
+                            margin-right: 20px;
+                            @include col-span-2;
+                        }
+                        
+                        img{
+                            width: 1.25rem;
+                            height: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--schedule-a-call{
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            margin-top: 5rem;
+            text-align: center;
+            border-radius: 3.125rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: $white;
+            color: $fColor;
+            border: inherit;
+            padding: 0.625rem 2.875rem 0.625rem 0.625rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                background-color: $sColor;
+                color: $fColor;
+                @include transition-colors;
+            }
+
+            &::after{
+                content: '';
+                background-image: url('../../dist/icons/send.svg');
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 1.25rem;
+                height: 100%;
+                top: 0;
+                right: 15px;
+            }
+        }
+    }
+}
