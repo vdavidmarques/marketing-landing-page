@@ -1,0 +1,147 @@
+@use "../../helpers" as *;
+
+.subheadline{
+    background-color: $fColorDark;
+    color: $white;
+    padding-bottom: 2.5rem;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-bottom: 5rem;   
+    }
+
+    &--image{
+        background-image: url('../../dist/images/escalando-o-seu-negocio.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 34% 50%;
+        width: 100%;
+        height: 37.5rem;
+        position: relative;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            height: 38.25rem;
+            background-position: center;
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+            height: 53.25rem;
+            background-position: 100% 30%;
+        }
+
+        &--container{
+            display: grid;
+            height: 100%;
+            align-items: end;
+            z-index: 20;
+            position: relative;
+            @include grid-cols-12;
+            
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../dist/images/wave-vector-right.svg');
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+            z-index: 10;
+            pointer-events: none; 
+
+            @media screen and (min-width: $breakpoint-lg) {
+                background-position: 50% 70%;
+            }
+        }
+
+        .sell-more{
+            font-family: $secondFont;
+            border: inherit;
+            border-radius: calc(infinity * 1px);
+            background-color: $fColor;
+            color: $white;
+            padding: 1.25rem;
+            height: 7.5rem;
+            width: 7.5rem;
+            font-size: 1.875rem;
+            line-height: 1.6875rem;
+            transform: translateY(-100px);
+            @include col-start-8;
+
+            @media screen and (min-width: 25.75rem) {
+                @include col-start-9;
+            }
+
+            @media screen and (min-width: $breakpoint-md) {
+                @include col-start-11;
+            }
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                background-color: $white;
+                color: $fColor;
+            }
+
+            @media screen and (min-width: $breakpoint-xl) {
+                width: 12.5rem;
+                height: 12.5rem;
+                transform: translateY(-9.375rem);
+                margin-left: -2.5rem;
+                font-size: 3.125rem;
+                line-height: 2.8125rem;
+            }
+
+        }
+    }
+    
+    &--content{
+        margin-top: -3.75rem;
+        z-index: 20;
+        position: relative;
+
+        @media screen and (min-width: $breakpoint-md) {
+            margin-top: 0;
+        }
+
+        &--container{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2.5rem;
+    
+            @media screen and (min-width: $breakpoint-lg) {
+                display: grid;
+                @include grid-cols-12;
+            
+            }
+
+            &--title, &--description .subtitle{
+                text-transform: uppercase;
+            }
+
+            &--title{
+                font-size: 1.125rem;
+
+                @media screen and (min-width: $breakpoint-lg) {
+                    font-size: 1.875rem;
+                    line-height: 2.8125rem;
+                    @include col-span-6;
+                }
+            }
+
+            &--description{
+                @media screen and (min-width: $breakpoint-lg) {
+                    @include col-span-6;
+                    @include col-start-7;
+                }
+
+                .subtitle{
+                    @media screen and (min-width: $breakpoint-lg) {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
